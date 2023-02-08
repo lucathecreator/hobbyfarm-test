@@ -51,3 +51,7 @@ output "public_ip" {
 output "hostname" {
   value = "${aws_instance.instance.public_dns}"
 }
+
+output "my-output" { 
+  value = "fucking output" 
+}
