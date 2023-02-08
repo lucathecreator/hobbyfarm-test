@@ -25,7 +25,7 @@ resource "aws_instance" "instance" {
   instance_type = "t2.medium"
   key_name = "${aws_key_pair.instance_keypair.key_name}"
   subnet_id = "${var.subnet}"
-  user_data = "${var.user_data}"
+  user_data = "I2Nsb3VkLWNvbmZpZwp3cml0ZV9maWxlczoKICAtIGNvbnRlbnQ6IHwKICAgICAgVEhJUyBJUyBBIFRFU1QgRk9SIENMT1VESU5JVAogICAgcGF0aDogL2hvbWUvdWJ1bnR1L3Rlc3QKcGFja2FnZV91cGRhdGU6IGZhbHNlCnBhY2thZ2VfdXBncmFkZTogZmFsc2UK"
   vpc_security_group_ids = ["${var.vpc_security_group_id}"]
   associate_public_ip_address = true
   tags = {
